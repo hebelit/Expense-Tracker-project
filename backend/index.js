@@ -20,7 +20,6 @@ import mergedTypeDefs from "./typeDefs/index.js";
 
 import {connectDB} from "./db/connectDB.js"
 import { configurePassport } from './passport/passport.config.js';
-import { Collection } from 'mongoose';
 
 dotenv.config();
 configurePassport();

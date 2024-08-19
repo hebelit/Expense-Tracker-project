@@ -1,9 +1,8 @@
-import {users} from "../dummyData/data.js"
 import User from "../models/user.model.js"
 
 const userResolver = {
     Query:{
-        auth_user: async(_,__,context) =>{
+        authUser: async(_,__,context) =>{
             try {
                 const user = await context.getUser()
                 return user;
@@ -18,7 +17,7 @@ const userResolver = {
                 return user;
             } catch (err) {
                 console.log("Error in user query: ",err);
-                throw new Error(err.message||"Error getting User")
+                throw new Error(err.message || "Error getting User")
             }
         }
     },

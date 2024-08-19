@@ -29,11 +29,11 @@ const transactionSchema = new mongoose.Schema({
         dafault:"Unknown",
     },
     date: {
-        type: DataTransfer,
+        type: Date,
         required: true,
     },
 });
 
-const Transaction = mongoose.model("Transaction", TransactionSchema);
+const Transaction = mongoose.model("Transaction", transactionSchema);
 
 export default Transaction;
